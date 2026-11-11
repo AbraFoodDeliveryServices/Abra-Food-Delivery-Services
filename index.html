@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Abra Food Delivery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container nav">
+        <div class="brand">
+          <span class="brand-mark">A</span>
+          <span>Abra Food Delivery</span>
+        </div>
+        <nav class="nav-links">
+          <a href="#menu">Menu</a>
+          <a href="#checkout">Checkout</a>
+          <a href="#orders">Orders</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container layout">
+      <section class="menu-panel" id="menu">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Popular picks</p>
+            <h1>Today's menu</h1>
+          </div>
+          <span class="chip">Fast delivery</span>
+        </div>
+        <div id="menu-list" class="menu-list"></div>
+      </section>
+
+      <aside class="cart-panel">
+        <div class="section-heading compact">
+          <div>
+            <p class="eyebrow">Your basket</p>
+            <h2>Cart</h2>
+          </div>
+          <span id="cart-count" class="chip neutral">0 items</span>
+        </div>
+        <div id="cart-items" class="cart-items"></div>
+
+        <div class="cart-summary">
+          <div class="summary-row">
+            <span>Subtotal</span>
+            <strong id="subtotal">$0.00</strong>
+          </div>
+          <div class="summary-row">
+            <span>Delivery</span>
+            <strong id="delivery">$4.00</strong>
+          </div>
+          <div class="summary-row total-row">
+            <span>Total</span>
+            <strong id="total">$0.00</strong>
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <section class="container checkout-wrap" id="checkout">
+      <div class="checkout-card">
+        <div class="section-heading compact">
+          <div>
+            <p class="eyebrow">Complete order</p>
+            <h2>Checkout</h2>
+          </div>
+        </div>
+
+        <form id="checkout-form" class="checkout-form">
+          <div class="field-row">
+            <label>
+              Full name
+              <input type="text" name="name" placeholder="John Doe" required />
+            </label>
+            <label>
+              Phone
+              <input type="tel" name="phone" placeholder="(555) 123-4567" required />
+            </label>
+          </div>
+
+          <label>
+            Delivery address
+            <input type="text" name="address" placeholder="123 Main Street, Austin" required />
+          </label>
+
+          <label>
+            Notes for the kitchen
+            <textarea name="notes" rows="3" placeholder="Extra sauce, no onions, etc."></textarea>
+          </label>
+
+          <button type="submit" class="primary-btn">Place order</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="container orders-wrap" id="orders">
+      <div class="section-heading compact">
+        <div>
+          <p class="eyebrow">Recent activity</p>
+          <h2>Orders</h2>
+        </div>
+      </div>
+      <div id="orders-list" class="orders-list"></div>
+    </section>
+
+    <div id="toast" class="toast" aria-live="polite"></div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
